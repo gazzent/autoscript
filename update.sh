@@ -36,7 +36,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget https://raw.githubusercontent.com/gazzent/autoscript/main/menu/menu.zip
+    wget https://raw.githubusercontent.com/gazzent/autoscript/main/up/menu.zip
     wget -q -O /usr/bin/enc "https://raw.githubusercontent.com/AngIMAN/autoscript/main/Enc/encrypt" ; chmod +x /usr/bin/enc
     7z x -p menu.zip
     chmod +x menu/*
