@@ -17,6 +17,10 @@ apt update && apt upgrade -y && update-grub && sleep 2 && reboot
 ```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/gazzent/autoscript/main/main.sh && chmod +x main.sh && sed -i -e 's/\r$//' main.sh && screen -S main ./main.sh
 ```
+### install v5
+```
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/gazzent/autoscript/main/vip.sh && chmod +x vip.sh && sed -i -e 's/\r$//' vip.sh && screen -S vip ./vip.sh
+```
 ### UPDATE SC
 ```
 wget -q https://raw.githubusercontent.com/gazzent/autoscript/main/update.sh && chmod +x update.sh && ./update.sh
