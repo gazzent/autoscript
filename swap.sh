@@ -69,7 +69,7 @@ sudo sysctl vm.swappiness=10
 sudo sysctl vm.vfs_cache_pressure=50
 
 # Simpan konfigurasi permanen
-echo 'vm.swappiness=10' | sudo tee /etc/sysctl.d/99-swappiness.conf
+echo 'vm.swappiness=100' | sudo tee /etc/sysctl.d/99-swappiness.conf
 echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.d/99-swappiness.conf
 
 echo -e "\n✅ Swap $ukuran berhasil dipasang dan diaktifkan!"
