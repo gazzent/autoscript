@@ -9,12 +9,19 @@ function loading() {
   done
 }
 
-echo "Pilih ukuran swap yang ingin Anda pasang:"
-echo "1) 1GB"
-echo "2) 2GB"
-echo "3) 3GB"
-echo "4) 4GB"
-echo "5) 6GB"
+clear
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "        💻 PILIH UKURAN SWAP FILE 🔧"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "│ No │   Ukuran Swap  │"
+echo "│━━━━━━━━━━━━━━━━━━│"
+echo "│  1 │      1 GB      │"
+echo "│  2 │      2 GB      │"
+echo "│  3 │      3 GB      │"
+echo "│  4 │      4 GB      │"
+echo "│  5 │      6 GB      │"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 read -p "Masukkan pilihan Anda (1-5): " pilihan
 
 case $pilihan in
