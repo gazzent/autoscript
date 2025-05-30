@@ -30,13 +30,13 @@ clear
 clear && clear && clear
 clear;clear;clear
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e "${BIBlue}│ ${BGCOLOR} WELCOME TO VPN KINGSTORE V5            ${BIBlue} │${NC}"
+echo -e "${BIBlue}│ ${BGCOLOR} WELCOME TO VPN KINGSTORE V5            ${BIBlue}"
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo ""
 sleep 4
 clear
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e "${BIBlue}│ ${BGCOLOR}             MASUKKAN NAMA KAMU         ${NC}${BIBlue} │${NC}"
+echo -e "${BIBlue}│ ${BGCOLOR}             MASUKKAN NAMA KAMU         ${NC}"
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $name =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -130,7 +130,7 @@ echo -e "${OK} ${BLUE} $1 ${FONT}"
 }
 function print_install() {
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "${YELLOW} # $1 ${FONT}"
+echo -e "${YELLOW} # $1 💿${FONT}"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 sleep 1
 }
@@ -140,7 +140,7 @@ echo -e "${ERROR} ${REDBG} $1 ${FONT}"
 function print_success() {
 if [[ 0 -eq $? ]]; then
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "${Green} # $1 berhasil dipasang"
+echo -e "${Green} # $1 ✅"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 sleep 2
 fi
@@ -297,8 +297,8 @@ TEXT="
 <code>Time  : </code><code>$TIMEZONE</code>
 <code>Exp   : </code><code>$EXPSC</code>
 <code>🧿───────────────────🧿</code>
-<i>Automatic Notification from Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/Candravpnz"},{"text":"JOIN","url":"https://t.me/CandravpnzStores"}]]}'
+<i>Automatic Notification from Panel</i>
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/Candravpnz"},{"text":"CHANNEL","url":"kingstoreVpn"}]]}'
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
 clear
@@ -754,7 +754,7 @@ echo enable service udp-custom
 systemctl enable udp-custom &>/dev/null
 print_success "Udp Custom Berhasil"
 clear
-print_install "MEMASANG NOOBZVPNS"
+print_install "💿MEMASANG NOOBZVPNS💿"
 cd
 wget https://raw.githubusercontent.com/SatanTech/noobz/main/noobzvpns.zip
 unzip noobzvpns.zip
@@ -1033,10 +1033,10 @@ echo -e "${BIBlue}╭═══════════════════�
 echo -e "${BIBlue}│${BGCOLOR} SUCCESS INSTALL AUTOSCRIPT PREMIUM BY VPN KINGSTORE${NC} "$
 echo -e "${BIBlue}╰════════════════════════════════════════════════════╯${NC}"
 echo -e ""
-echo -e "\033[93;1m please Wait in 5 second...\033[0m"
+echo -e "\033[93;1m please Wait in 3 second...\033[0m"
 systemctl restart xray
 systemctl restart udp-custom
-sleep 5
+sleep 3
 read -p "Press [ Enter ]  To Reboot"
 clear
 reboot
