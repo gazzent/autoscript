@@ -23,7 +23,7 @@ case $pilihan in
   3) ukuran=3G ;;
   4) ukuran=4G ;;
   5) ukuran=6G ;;
-  *) echo "Pilihan tidak valid."; exit 1 ;;
+  *) echo "❌ Pilihan tidak valid."; exit 1 ;;
 esac
 
 echo -e "\n💿💿💿💿 Membuat swap sebesar $ukuran...\n"
@@ -39,9 +39,9 @@ loading
 
 # Membuat file swap baru
 if sudo fallocate -l $ukuran /swapfile; then
-  echo "Swap file berhasil dibuat dengan fallocate."
+  echo "✅ Swap file berhasil dibuat dengan fallocate."
 else
-  echo "fallocate gagal, mencoba menggunakan dd..."
+  echo "⚠️ fallocate gagal, mencoba menggunakan dd..."
   sudo dd if=/dev/zero of=/swapfile bs=1M count=$(echo $ukuran | sed 's/G//')000 status=progress
 fi
 loading
@@ -64,12 +64,14 @@ if ! grep -q "/swapfile" /etc/fstab; then
 fi
 loading
 
-# Tuning opsi sistem
+# Tuning opsi sistem runtime
 sudo sysctl vm.swappiness=100
 sudo sysctl vm.vfs_cache_pressure=50
 
-# Simpan konfigurasi permanen
-echo 'vm.swappiness=100' | sudo tee /etc/sysctl.d/99-swappiness.conf
-echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.d/99-swappiness.conf
+# Simpan konfigurasi permanen ke /etc/sysctl.conf
+sudo sed -i '/vm\.swappiness/d' /etc/sysctl.conf
+sudo sed -i '/vm\.vfs_cache_pressure/d' /etc/sysctl.conf
+echo 'vm.swappiness=100' | sudo tee -a /etc/sysctl.conf
+echo 'vm.vfs_cache_pressure=50' | sudo tee -a /etc/sysctl.conf
 
-echo -e "\n✅ Swap $ukuran berhasil dipasang dan diaktifkan!"
+echo -e "\n✅ Swap sebesar $ukuran berhasil dipasang dan diaktifkan!"
