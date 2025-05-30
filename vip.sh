@@ -253,9 +253,10 @@ echo -e "${BIBlue}│ \033[1;37mPlease select a your Choice to Set Domain${BIBlu
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e "${BIBlue}│  [ 1 ]  \033[1;37mDOMAIN KAMU SENDIRI       ${NC}"
-echo -e "${BIBlue}│  [ 2 ]  \033[1;37mDOMAIN YANG PUNYA SCRIPT  ${NC}"
+echo -e "${BIBlue}│  [ 2 ]  \033[1;37mSUB.VPNZTUNNEL.BIZ.ID     ${NC}"
+echo -e "${BIBlue}│  [ 3 ]  \033[1;37mSUB.VPNCLOUD.WEB.ID     ${NC}"
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
-read -p "Please select numbers 1-2 or Any Button(Random) : " host
+read -p "Please select numbers 1-3 or Any Button(Random) : " host
 echo ""
 if [[ $host == "1" ]]; then
 clear
@@ -272,6 +273,10 @@ echo ""
 elif [[ $host == "2" ]]; then
 wget ${REPO}Fls/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
+echo ""
+elif [[ $host == "3" ]]; then
+wget ${REPO}Fls/cf.sh && chmod +x cf2.sh && ./cf2.sh
+rm -f /root/cf2.sh
 clear
 else
 print_install "Random Subdomain/Domain is Used"
