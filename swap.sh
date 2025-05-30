@@ -65,7 +65,7 @@ fi
 loading
 
 # Tuning opsi sistem
-sudo sysctl vm.swappiness=10
+sudo sysctl vm.swappiness=100
 sudo sysctl vm.vfs_cache_pressure=50
 
 # Simpan konfigurasi permanen
