@@ -11,13 +11,13 @@ echo -e "\033[91;1m ketik sesuai nama yg kamu mau :\033[0m \033[93m \033[0m"
 echo -e " "
 read -p "SUBDOMAIN :  " domen
 echo -e ""
-DOMAIN=zvx.my.id
+DOMAIN=vpnztunnel.biz.id
 sub=${domen}
-dns=${sub}.vvpnstore.my.id
+dns=${sub}.vpnztunnel.biz.id
 #(</dev/urandom tr -dc a-z0-9 | head -c5)
-dns=${sub}.vvpnstore.my.id
-CF_KEY=0f9ed4286475de79bae2b91e9af4f8af9fed9
-CF_ID=imanfals51@gmail.com
+dns=${sub}.vpnztunnel.biz.id
+CF_KEY=65d179fbaf44372f2313310e2e874e313d91f
+CF_ID=candra23032003@gmail.com
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${dns}..."
